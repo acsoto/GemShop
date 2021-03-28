@@ -1,0 +1,11 @@
+name: GemShop
+version: ${project.version}
+main: com.mcatk.gemshop.GemShop
+authors: [ soto ]
+depend:
+  - Gem
+commands:
+  gemshop:
+    description: main command
+  gsi:
+    description: gem shop item
