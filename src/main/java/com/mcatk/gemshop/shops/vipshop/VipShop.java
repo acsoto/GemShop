@@ -10,9 +10,9 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class VipShop {
     
     public void buyVip(Player player, String vipType) {
-        new BukkitRunnable() {
-            @Override
-            public void run() {
+//        new BukkitRunnable() {
+//            @Override
+//            public void run() {
                 if (player.hasPermission("cmi.command.se")) {
                     player.sendMessage(Message.INFO + "已拥有VIP");
                 } else if (Gem.getPlugin().getGemExecutor().
@@ -27,8 +27,8 @@ public class VipShop {
                 } else {
                     player.sendMessage(Message.ERROR + "宝石不足");
                 }
-            }
-        }.runTaskAsynchronously(Gem.getPlugin());
+//            }
+//        }.runTaskAsynchronously(Gem.getPlugin());
     }
     
     private int getPrice(String vipType) {

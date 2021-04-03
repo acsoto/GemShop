@@ -21,9 +21,9 @@ public class PermShop {
     }
     
     public void buyPerm(Player player, String permission) {
-        new BukkitRunnable() {
-            @Override
-            public void run() {
+//        new BukkitRunnable() {
+//            @Override
+//            public void run() {
                 if (!permPrice.containsKey(permission)) {
                     player.sendMessage(Message.ERROR + "无该权限");
                 } else if (player.hasPermission(permission)) {
@@ -35,7 +35,7 @@ public class PermShop {
                 } else {
                     player.sendMessage(Message.ERROR + "宝石不足");
                 }
-            }
-        }.runTaskAsynchronously(Gem.getPlugin());
+//            }
+//        }.runTaskAsynchronously(Gem.getPlugin());
     }
 }

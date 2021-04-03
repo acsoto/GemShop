@@ -24,9 +24,9 @@ public class ItemShop {
     }
     
     public void buyItem(Player player, String shopId, String itemId) {
-        new BukkitRunnable() {
-            @Override
-            public void run() {
+//        new BukkitRunnable() {
+//            @Override
+//            public void run() {
                 if (itemsMap.get(shopId) == null) {
                     player.sendMessage(Message.ERROR + "无该分类");
                 }
@@ -45,8 +45,8 @@ public class ItemShop {
                 } else {
                     player.sendMessage(Message.INFO + "宝石不足");
                 }
-            }
-        }.runTaskAsynchronously(Gem.getPlugin());
+//            }
+//        }.runTaskAsynchronously(Gem.getPlugin());
     }
     
     public void addItem(Player player, String shopId, String itemId, String price) {
