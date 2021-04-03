@@ -26,6 +26,10 @@ public class GemListener implements Listener {
                                         (Player) event.getWhoClicked(),shopId, itemId
                         );
                     }
+                    if (icon.getItemMeta().getDisplayName().equals("返回")){
+                        ((Player) event.getWhoClicked()).chat("/gemshop");
+                    }
+                    
                 }
             }
         }

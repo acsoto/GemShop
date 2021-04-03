@@ -12,7 +12,9 @@ public class CommandGemShop implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
-            if (args.length != 2) {
+            if (args.length == 0) {
+                return true;
+            } else if (args.length != 2) {
                 sender.sendMessage("参数错误");
                 return true;
             }

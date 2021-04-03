@@ -1,9 +1,12 @@
 package com.mcatk.gemshop.shops.itemshop;
 
+import com.sun.deploy.ui.DialogTemplate;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -16,6 +19,7 @@ public class ItemShopGui {
         for (Item i : new TreeMap<>(items.getMap()).values()) {
             gui.addItem(getIcon(i));
         }
+        gui.setItem(54,getQuitIcon());
     }
     
     public Inventory getGui() {
@@ -35,6 +39,14 @@ public class ItemShopGui {
         list.add("§6 $消耗$ §a " + item.getPrice() + " §b宝石");
         list.add("§e§m§l一§6§m§l一§c§m§l一§a§m§l一§b§m§l一§a§m§l一§c§m§l一§6§m§l一§e§m§l一");
         meta.setLore(list);
+        icon.setItemMeta(meta);
+        return icon;
+    }
+    
+    private ItemStack getQuitIcon(){
+        ItemStack icon =  new ItemStack(Material.GOLD_NUGGET);
+        ItemMeta meta = icon.getItemMeta();
+        meta.setDisplayName("返回");
         icon.setItemMeta(meta);
         return icon;
     }
