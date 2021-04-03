@@ -1,12 +1,10 @@
 package com.mcatk.gemshop.shops.itemshop;
 
-import com.sun.deploy.ui.DialogTemplate;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -19,7 +17,7 @@ public class ItemShopGui {
         for (Item i : new TreeMap<>(items.getMap()).values()) {
             gui.addItem(getIcon(i));
         }
-        gui.setItem(54,getQuitIcon());
+        gui.setItem(53,getQuitIcon());
     }
     
     public Inventory getGui() {
