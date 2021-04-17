@@ -12,7 +12,7 @@ public class GemListener implements Listener {
     
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (event.getInventory().getTitle().contains("宝石商店")) {
+        if (event.getInventory().getTitle().contains("§6宝石商店-")) {
             if (event.getWhoClicked() instanceof Player) {
                 ItemStack icon = event.getCurrentItem();
                 event.setCancelled(true);
