@@ -3,6 +3,7 @@ package com.mcatk.gemshop.shops.itemshop;
 import com.mcatk.gem.Gem;
 import com.mcatk.gemshop.GemShop;
 import com.mcatk.gemshop.Message;
+import org.apache.commons.lang.text.StrBuilder;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -69,5 +70,14 @@ public class ItemShop {
     
     public Items getItems(String shopId) {
         return itemsMap.get(shopId);
+    }
+    
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder("现已有商店：");
+        for (String key: itemsMap.keySet()){
+            stringBuilder.append(key);
+        }
+        return stringBuilder.toString();
     }
 }

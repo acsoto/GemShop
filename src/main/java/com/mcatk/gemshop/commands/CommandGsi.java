@@ -26,6 +26,9 @@ public class CommandGsi implements CommandExecutor {
                 GemShop.getPlugin().getShopFactory().getItemShop().
                         delItem(args[1], args[2]);
             }
+            if (args[0].equals("list")) {
+                sender.sendMessage(GemShop.getPlugin().getShopFactory().getItemShop().toString());
+            }
             return true;
         } else {
             return false;
